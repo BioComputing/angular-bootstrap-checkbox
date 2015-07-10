@@ -1,13 +1,15 @@
 "use strict";
 
+"use strict";
+
 angular.module("ui.checkbox", []).directive("checkbox", function() {
 	return {
 		scope: {},
 		require: "ngModel",
 		restrict: "E",
 		replace: "true",
-		template: "<button type=\"button\" ng-style=\"stylebtn\" class=\"btn btn-default\" ng-class=\"{'btn-xs': size==='default', 'btn-sm': size==='large', 'btn-lg': size==='largest', 'checked': checked===true}\">" +
-			"<span ng-style=\"styleicon\" class=\"glyphicon\" ng-class=\"{'glyphicon-ok': checked===true}\"></span>" +
+		template: "<button type=\"button\" ng-style=\"stylebtn\" class=\"btn btn-default\" ng-class=\"{'btn-xs': size==='default', 'btn-sm': size==='large', 'btn-lg': size==='largest'}\">" +
+			"<span ng-style=\"styleicon\" class=\"fa\" ng-class=\"{'fa-check': checked===true}\"></span>" +
 			"</button>",
 		link: function(scope, elem, attrs, modelCtrl) {
 			scope.size = "default";
@@ -19,17 +21,17 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 			if(attrs.large !== undefined) {
 				scope.size = "large";
 				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "30px"};
-				scope.styleicon = {"width": "8px", "left": "-5px", "font-size": "17px"};
+				scope.styleicon = {"width": "8px", "left": "-2px", "font-size": "17px"};
 			}
 			if(attrs.larger !== undefined) {
 				scope.size = "larger";
 				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "34px"};
-				scope.styleicon = {"width": "8px", "left": "-8px", "font-size": "22px"};
+				scope.styleicon = {"width": "8px", "left": "-5px", "font-size": "22px"};
 			}
 			if(attrs.largest !== undefined) {
 				scope.size = "largest";
 				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "45px"};
-				scope.styleicon = {"width": "11px", "left": "-11px", "font-size": "30px"};
+				scope.styleicon = {"width": "11px", "left": "-8px", "font-size": "30px"};
 			}
 
 			var trueValue = true;
