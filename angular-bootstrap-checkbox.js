@@ -1,7 +1,5 @@
 "use strict";
 
-"use strict";
-
 angular.module("ui.checkbox", []).directive("checkbox", function() {
 	return {
 		scope: {},
