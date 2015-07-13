@@ -21,17 +21,17 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 			if(attrs.large !== undefined) {
 				scope.size = "large";
 				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "30px"};
-				scope.styleicon = {"width": "8px", "left": "-2px", "font-size": "17px"};
+				scope.styleicon = {"width": "8px", "left": "-2px", "font-size": "17px", "position" : "relative"};
 			}
 			if(attrs.larger !== undefined) {
 				scope.size = "larger";
 				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "34px"};
-				scope.styleicon = {"width": "8px", "left": "-5px", "font-size": "22px"};
+				scope.styleicon = {"width": "8px", "left": "-5px", "font-size": "22px", "position" : "relative" };
 			}
 			if(attrs.largest !== undefined) {
 				scope.size = "largest";
 				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "45px"};
-				scope.styleicon = {"width": "11px", "left": "-8px", "font-size": "30px"};
+				scope.styleicon = {"padding-top": "2px", "padding-bottom": "2px","width": "11px", "font-size": "30px", "left": "-8px", "position" : "relative"};
 			}
 
 			var trueValue = true;
