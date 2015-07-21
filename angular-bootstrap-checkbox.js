@@ -7,7 +7,7 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 		restrict: "E",
 		replace: "true",
 		template: "<button type=\"button\" ng-style=\"stylebtn\" class=\"btn btn-default\" ng-class=\"{'btn-xs': size==='default', 'btn-sm': size==='large', 'btn-lg': size==='largest'}\">" +
-			"<span ng-style=\"styleicon\" class=\"fa\" ng-class=\"{'fa-check': checked===true}\"></span>" +
+			"<span ng-style=\"styleicon\" class=\"fa\" ng-class=\"{'fa-check-square-o': checked===true, 'fa-square-o' : checked===false}\"></span>" +
 			"</button>",
 		link: function(scope, elem, attrs, modelCtrl) {
 			scope.size = "default";
@@ -28,8 +28,8 @@ angular.module("ui.checkbox", []).directive("checkbox", function() {
 			}
 			if(attrs.largest !== undefined) {
 				scope.size = "largest";
-				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "45px"};
-				scope.styleicon = {"padding-top": "2px", "padding-bottom": "2px","width": "11px", "font-size": "30px", "left": "-8px", "position" : "relative"};
+				scope.stylebtn = {"padding-top": "2px", "padding-bottom": "2px", "height": "52px", "width": "52px"};
+				scope.styleicon = {"padding-top": "2px", "padding-bottom": "2px","width": "11px", "font-size": "50px", "left": "-15px", "position" : "relative"};
 			}
 
 			var trueValue = true;
